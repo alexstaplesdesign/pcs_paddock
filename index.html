@@ -1398,6 +1398,26 @@
       .specials-grid { gap: 16px; }
       .special-card { padding: 28px 22px; }
     }
+
+    /* ── Scroll reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Stagger delay helpers */
+    .reveal-d1 { transition-delay: 0.08s; }
+    .reveal-d2 { transition-delay: 0.16s; }
+    .reveal-d3 { transition-delay: 0.24s; }
+    .reveal-d4 { transition-delay: 0.32s; }
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -1469,11 +1489,11 @@
     <!-- ══ ABOUT ══ -->
     <section id="about" class="section-pad" aria-labelledby="about-heading">
       <div class="container">
-        <div style="margin-bottom: 48px;">
+        <div style="margin-bottom: 48px;" class="reveal">
           <div class="ornament"><span>◆ Our Story ◆</span></div>
         </div>
         <div class="about-grid">
-          <div class="about-story">
+          <div class="about-story reveal reveal-d1">
             <span class="section-eyebrow" style="color: var(--brown);">Family-Owned · Since 2007</span>
             <h2 id="about-heading" class="section-heading font-display" style="color: var(--text); margin-bottom: 28px;">A Barn Built for Good Times</h2>
             <p>Nestled on Titusville Road in Poughkeepsie, PC's Paddock has been welcoming Hudson Valley locals and visitors since 2007 — right inside a lovingly renovated 1840s barn. From the weathered wood beams overhead to the warmth of the bar, every corner tells a story.</p>
@@ -1489,7 +1509,7 @@
               <span class="badge">Wheelchair Accessible</span>
             </div>
           </div>
-          <div class="about-visual">
+          <div class="about-visual reveal reveal-d2">
             <div class="about-logo-frame">
               <img src="brand_assets/pcs_logo_shield.png" alt="PC's Paddock shield logo — Restaurant crest" />
             </div>
@@ -1502,14 +1522,14 @@
     <!-- ══ MENU ══ -->
     <section id="menu" class="section-pad" aria-labelledby="menu-heading">
       <div class="container">
-        <div style="text-align: center; margin-bottom: 8px;">
+        <div style="text-align: center; margin-bottom: 8px;" class="reveal">
           <span class="section-eyebrow" style="color: var(--brown);">Our Kitchen</span>
           <h2 id="menu-heading" class="section-heading font-display" style="color: var(--text);">What We're Cooking</h2>
         </div>
 
         <!-- Staple items — always visible -->
         <div class="staple-grid">
-          <div class="staple-card">
+          <div class="staple-card reveal reveal-d1">
             <img src="brand_assets/images/chicken_wings.jpg" alt="Chicken Wings" class="staple-card-img" />
             <div class="staple-card-body">
               <span class="staple-card-badge">★ House Favorite</span>
@@ -1518,7 +1538,7 @@
               <div class="staple-card-desc">Smoked or traditional, with 8 signature sauces — Asian Cowboy, Devil's Butter, Maple Bacon Bourbon &amp; more.</div>
             </div>
           </div>
-          <div class="staple-card">
+          <div class="staple-card reveal reveal-d2">
             <img src="brand_assets/images/paddock_bruger.jpg" alt="Paddock Burger" class="staple-card-img" />
             <div class="staple-card-body">
               <span class="staple-card-badge">★ House Favorite</span>
@@ -1527,7 +1547,7 @@
               <div class="staple-card-desc">Sautéed onions &amp; mushrooms, applewood smoked bacon, cheddar cheese, lettuce &amp; tomato on an 8oz patty.</div>
             </div>
           </div>
-          <div class="staple-card">
+          <div class="staple-card reveal reveal-d3">
             <img src="brand_assets/images/chimichuri_steak.jpg" alt="Chimichurri NY Strip" class="staple-card-img" />
             <div class="staple-card-body">
               <span class="staple-card-label">Entrée</span>
@@ -1535,7 +1555,7 @@
               <div class="staple-card-desc">12oz. grilled NY strip steak topped with house chimichurri sauce and sautéed onions.</div>
             </div>
           </div>
-          <div class="staple-card">
+          <div class="staple-card reveal reveal-d4">
             <img src="brand_assets/images/bourbon_street.jpg" alt="Bourbon Street" class="staple-card-img" />
             <div class="staple-card-body">
               <span class="staple-card-label">Entrée</span>
@@ -1893,7 +1913,7 @@
 
 
       <div class="container">
-        <div style="margin-bottom: 48px;">
+        <div style="margin-bottom: 48px;" class="reveal">
           <span class="specials-section-eyebrow">This Week</span>
           <h2 id="specials-heading" class="specials-section-heading">Featured Specials</h2>
           <div class="ornament ornament-light" style="margin-top: 24px;"><span>◆</span></div>
@@ -1901,7 +1921,7 @@
         <div class="specials-grid">
 
           <!-- Happy Hour -->
-          <div class="special-card shadow-warm">
+          <div class="special-card shadow-warm reveal reveal-d1">
             <div class="special-icon" aria-hidden="true">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3l1 7H6l1-4H4l3 11h10l3-11h-3l1 4h-3l1-7M5 21h14"/></svg>
             </div>
@@ -1918,7 +1938,7 @@
           </div>
 
           <!-- Wine Wednesdays -->
-          <div class="special-card shadow-warm">
+          <div class="special-card shadow-warm reveal reveal-d2">
             <div class="special-icon" aria-hidden="true">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 22h8M12 22v-6M6 3h12l-2 8a4 4 0 01-8 0L6 3z"/></svg>
             </div>
@@ -1933,7 +1953,7 @@
           </div>
 
           <!-- St. Patrick's Day -->
-          <div class="special-card special-card-stpatricks shadow-warm">
+          <div class="special-card special-card-stpatricks shadow-warm reveal reveal-d3">
             <span class="stpatricks-badge">☘ March 17 Only · 12PM – 8PM</span>
             <div class="special-icon" aria-hidden="true">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C9 2 7 4 7 7c-3 0-5 2-5 5 0 2.5 1.5 4.5 4 5h12c2.5-.5 4-2.5 4-5 0-3-2-5-5-5 0-3-2-5-5-5z"/><path d="M12 17v5M9 22h6"/></svg>
@@ -1960,11 +1980,11 @@
     <!-- ══ HOURS & LOCATION ══ -->
     <section id="hours" class="section-pad" aria-labelledby="hours-heading">
       <div class="container">
-        <div style="margin-bottom: 8px;">
+        <div style="margin-bottom: 8px;" class="reveal">
           <span class="hours-eyebrow">Find Us</span>
           <h2 id="hours-heading" class="hours-heading">Hours &amp; Location</h2>
         </div>
-        <div class="hours-grid">
+        <div class="hours-grid reveal reveal-d1">
 
           <div>
             <span class="hours-label">Hours of Operation</span>
@@ -2055,13 +2075,13 @@
     <!-- ══ ORDER ONLINE ══ -->
     <section id="order" class="section-pad" aria-labelledby="order-heading">
       <div class="container-sm" style="text-align: center;">
-        <span class="section-eyebrow" style="color: var(--brown);">Can't Come In?</span>
-        <h2 id="order-heading" class="section-heading font-display" style="color: var(--text); margin-bottom: 12px;">Order Your Way</h2>
+        <span class="section-eyebrow reveal" style="color: var(--brown);">Can't Come In?</span>
+        <h2 id="order-heading" class="section-heading font-display reveal reveal-d1" style="color: var(--text); margin-bottom: 12px;">Order Your Way</h2>
         <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; max-width: 480px; margin: 0 auto 8px;">Dine-in, takeout, or delivery — we've got you covered.</p>
       </div>
       <div class="container-sm">
         <div class="order-cards">
-          <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer" class="order-card" aria-label="Order on Uber Eats">
+          <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer" class="order-card reveal reveal-d1" aria-label="Order on Uber Eats">
             <div class="order-card-icon" aria-hidden="true">
               <img src="brand_assets/images/uber_eats_logo.svg" alt="" style="width:38px;height:38px;object-fit:cover;border-radius:50%;" />
             </div>
@@ -2069,7 +2089,7 @@
             <div class="order-card-desc">Order delivery or pickup through the Uber Eats app</div>
             <span class="order-card-action">Order Now →</span>
           </a>
-          <a href="https://www.grubhub.com" target="_blank" rel="noopener noreferrer" class="order-card" aria-label="Order on Grubhub">
+          <a href="https://www.grubhub.com" target="_blank" rel="noopener noreferrer" class="order-card reveal reveal-d2" aria-label="Order on Grubhub">
             <div class="order-card-icon" aria-hidden="true">
               <img src="brand_assets/images/grubhub_logo.png" alt="" style="width:38px;height:38px;object-fit:cover;border-radius:50%;" />
             </div>
@@ -2077,7 +2097,7 @@
             <div class="order-card-desc">Find us on Grubhub for delivery to your door</div>
             <span class="order-card-action">Order Now →</span>
           </a>
-          <a href="tel:+18454544930" class="order-card" aria-label="Call for takeout: 845-454-4930">
+          <a href="tel:+18454544930" class="order-card reveal reveal-d3" aria-label="Call for takeout: 845-454-4930">
             <div class="order-card-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
@@ -2092,7 +2112,7 @@
 
     <!-- ══ RESERVATIONS CTA ══ -->
     <section id="reservations" class="section-pad" aria-labelledby="res-heading">
-      <div class="res-content">
+      <div class="res-content reveal">
         <div class="ornament ornament-light" style="margin-bottom: 40px;"><span>◆ Reserve Your Seat ◆</span></div>
         <h2 id="res-heading" class="res-heading">Join Us at the Barn</h2>
         <p class="res-sub">Reservations are highly recommended, especially for Friday and weekend dinners. Call us to secure your table — we'd love to have you.</p>
@@ -2117,9 +2137,9 @@
 
   <!-- ══ EMAIL SIGNUP ══ -->
   <section id="email-signup" aria-labelledby="email-heading">
-    <span class="email-signup-eyebrow">Join the Inner Circle</span>
-    <h2 id="email-heading" class="email-signup-heading">Get a Free Dessert<br>On Your Next Visit</h2>
-    <p class="email-signup-sub">Sign up and we'll send you a complimentary dessert offer, plus the occasional note about specials, seasonal menus, and events at the barn.</p>
+    <span class="email-signup-eyebrow reveal">Join the Inner Circle</span>
+    <h2 id="email-heading" class="email-signup-heading reveal reveal-d1">Get a Free Dessert<br>On Your Next Visit</h2>
+    <p class="email-signup-sub reveal reveal-d2">Sign up and we'll send you a complimentary dessert offer, plus the occasional note about specials, seasonal menus, and events at the barn.</p>
     <form class="email-form" id="email-form" novalidate>
       <input
         type="email"
@@ -2253,6 +2273,18 @@
     if (motionQuery.matches) {
       document.documentElement.style.setProperty('--transition-duration', '0ms');
     }
+
+    // ── Scroll reveal ──
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   </script>
 </body>
 </html>
