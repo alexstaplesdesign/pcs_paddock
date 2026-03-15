@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC's Paddock — Brand Identity Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --green-hunter: #2D5A3D;
+      --green-dark: #1A3A26;
+      --cream: #E8E0CC;
+      --off-white: #F5F0E8;
+      --gold: #B8965A;
+      --gold-muted: #C9A96E;
+      --sage: #C8D9BE;
+      --charcoal: #2C2C2C;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #ccc;
+      font-family: 'Lato', sans-serif;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      break-after: page;
+      overflow: hidden;
+      position: relative;
+      background: var(--off-white);
+      margin: 0 auto 20px auto;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    /* ============================================================
+       PAGE 1 — COVER
+    ============================================================ */
+    .cover {
+      background: var(--green-dark);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .cover-rule-top {
+      position: absolute;
+      top: 32px;
+      left: 40px;
+      right: 40px;
+      height: 1px;
+      background: var(--gold);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .cover-rule-bottom {
+      position: absolute;
+      bottom: 32px;
+      left: 40px;
+      right: 40px;
+      height: 1px;
+      background: var(--gold);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .cover-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 297mm;
+      padding-top: 22%;
+      padding-bottom: 60px;
+      padding-left: 40px;
+      padding-right: 40px;
+      text-align: center;
+    }
+
+    .cover-eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      color: var(--cream);
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    .cover-logo {
+      width: 160px;
+      height: auto;
+      margin-bottom: 36px;
+    }
+
+    .cover-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 52px;
+      color: var(--cream);
+      letter-spacing: -0.01em;
+      line-height: 1.05;
+      margin-bottom: 10px;
+    }
+
+    .cover-subtitle {
+      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--gold);
+      letter-spacing: 0.3em;
+      margin-bottom: 28px;
+    }
+
+    .cover-divider {
+      width: 280px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 20px auto;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .cover-tagline {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      color: rgba(232, 224, 204, 0.6);
+      letter-spacing: 0.05em;
+    }
+
+    .cover-version {
+      position: absolute;
+      bottom: 48px;
+      right: 48px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      color: rgba(232, 224, 204, 0.4);
+      letter-spacing: 0.05em;
+    }
+
+    /* ============================================================
+       PAGE 2 — BRAND OVERVIEW
+    ============================================================ */
+    .page-with-sidebar {
+      display: flex;
+      min-height: 297mm;
+    }
+
+    .sidebar-col {
+      width: 48px;
+      background: var(--green-dark);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .sidebar-label {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+
+    .main-col {
+      flex: 1;
+      padding: 52px 44px 0 44px;
+      position: relative;
+      background: var(--off-white);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .oversized-num {
+      position: absolute;
+      top: 28px;
+      right: 36px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 120px;
+      color: var(--sage);
+      line-height: 1;
+      user-select: none;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .section-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: var(--green-dark);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .body-text {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: var(--charcoal);
+      line-height: 1.7;
+      max-width: 520px;
+    }
+
+    .traits-label {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin: 28px 0 14px 0;
+    }
+
+    .traits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 0;
+    }
+
+    .trait-card {
+      background: var(--sage);
+      border-left: 3px solid var(--gold);
+      padding: 12px 14px;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .trait-card-full {
+      grid-column: 1 / -1;
+    }
+
+    .trait-name {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--green-dark);
+      margin-bottom: 3px;
+    }
+
+    .trait-desc {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      color: var(--charcoal);
+      line-height: 1.5;
+    }
+
+    .tagline-bar {
+      background: var(--green-dark);
+      margin: 0 -44px;
+      padding: 24px 44px;
+      margin-top: 28px;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .tagline-primary {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--cream);
+      margin-bottom: 6px;
+    }
+
+    .tagline-extended {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 17px;
+      color: var(--gold);
+    }
+
+    /* ============================================================
+       PAGE 3 — LOGO SYSTEM
+    ============================================================ */
+    .logo-page-inner {
+      padding: 52px 44px 40px 44px;
+      min-height: 297mm;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-display-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0 32px 0;
+    }
+
+    .logo-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .logo-panel-box {
+      width: 100%;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .logo-panel-box-dark {
+      background: var(--green-dark);
+    }
+
+    .logo-panel-box-cream {
+      background: var(--cream);
+    }
+
+    .logo-panel-box-offwhite {
+      background: var(--off-white);
+      border: 1px solid rgba(44, 44, 44, 0.12);
+    }
+
+    .logo-panel-label {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--green-dark);
+      letter-spacing: 0.15em;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .logo-panel-usage {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 10px;
+      color: var(--charcoal);
+      text-align: center;
+      margin-top: 4px;
+      line-height: 1.5;
+      opacity: 0.7;
+    }
+
+    .rules-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rules-label {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .rules-col-header {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+    }
+
+    .rules-col-header-do {
+      background: var(--green-hunter);
+      color: var(--cream);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .rules-col-header-dont {
+      background: #8B3A3A;
+      color: #fff;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .rule-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+      color: var(--charcoal);
+      line-height: 1.5;
+    }
+
+    .rule-icon {
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ============================================================
+       PAGE 4 — COLOR PALETTE SWATCHES
+    ============================================================ */
+    .palette-page-inner {
+      padding: 52px 44px 40px 44px;
+      min-height: 297mm;
+    }
+
+    .swatches-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .swatch-card {
+      display: flex;
+      flex-direction: column;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .swatch-block {
+      height: 140px;
+      width: 100%;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .swatch-block-dark {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px 12px;
+    }
+
+    .swatch-block-light {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px 12px;
+    }
+
+    .swatch-name-on-dark {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--cream);
+      line-height: 1.2;
+    }
+
+    .swatch-hex-on-dark {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 11px;
+      color: rgba(232, 224, 204, 0.85);
+    }
+
+    .swatch-info {
+      padding: 10px 0 0 0;
+    }
+
+    .swatch-name {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--charcoal);
+      line-height: 1.3;
+      margin-bottom: 2px;
+    }
+
+    .swatch-hex {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--charcoal);
+    }
+
+    .swatch-rgb {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 10px;
+      color: rgba(44, 44, 44, 0.6);
+      margin-top: 3px;
+    }
+
+    .swatch-role {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      color: rgba(44, 44, 44, 0.5);
+      font-style: italic;
+      margin-top: 3px;
+      line-height: 1.5;
+    }
+
+    .swatch-name-light {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--charcoal);
+      line-height: 1.2;
+    }
+
+    .swatch-hex-light {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--charcoal);
+    }
+
+    /* ============================================================
+       PAGE 5 — COLOR PAIRINGS
+    ============================================================ */
+    .pairings-page {
+      background: var(--green-dark);
+      min-height: 297mm;
+      padding: 52px 44px 44px 44px;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .pairings-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .pairings-heading {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 36px;
+      color: var(--cream);
+      margin-bottom: 32px;
+    }
+
+    .pairings-oversized {
+      position: absolute;
+      top: 28px;
+      right: 36px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 120px;
+      color: rgba(200, 217, 190, 0.08);
+      line-height: 1;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .pairings-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .pairing-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(184, 150, 90, 0.2);
+      overflow: hidden;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .pairing-strip {
+      display: flex;
+      height: 130px;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .pairing-half {
+      flex: 1;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .pairing-info {
+      padding: 14px 16px 18px 16px;
+    }
+
+    .pairing-name {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--cream);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .pairing-use {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      color: var(--gold-muted);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       PAGE 6 — TYPOGRAPHY
+    ============================================================ */
+    .type-page-inner {
+      padding: 52px 44px 40px 44px;
+      min-height: 297mm;
+    }
+
+    .type-specimens {
+      margin: 28px 0 28px 0;
+    }
+
+    .type-specimen-band {
+      border-bottom: 1px solid rgba(44, 44, 44, 0.1);
+      padding: 18px 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .type-specimen-band:first-child {
+      border-top: 1px solid rgba(44, 44, 44, 0.1);
+    }
+
+    .type-specimen-text {
+      flex: 1;
+    }
+
+    .type-specimen-label {
+      flex-shrink: 0;
+      text-align: right;
+      max-width: 180px;
+    }
+
+    .type-label-text {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 9px;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1.6;
+    }
+
+    .type-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+    }
+
+    .type-table th {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 9px;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--green-hunter);
+      padding: 8px 12px;
+      text-align: left;
+      background: transparent;
+    }
+
+    .type-table td {
+      font-family: 'Lato', sans-serif;
+      font-size: 11px;
+      color: var(--charcoal);
+      padding: 9px 12px;
+      line-height: 1.4;
+      vertical-align: top;
+    }
+
+    .type-table tr:nth-child(even) td {
+      background: var(--sage);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .type-table tr:nth-child(odd) td {
+      background: #fff;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    /* ============================================================
+       PAGE 7 — BRAND VOICE
+    ============================================================ */
+    .voice-page {
+      background: var(--cream);
+      min-height: 297mm;
+      padding: 52px 44px 44px 44px;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .voice-oversized {
+      position: absolute;
+      top: 28px;
+      right: 36px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 120px;
+      color: rgba(45, 90, 61, 0.08);
+      line-height: 1;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .voice-intro {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--green-hunter);
+      line-height: 1.5;
+      max-width: 440px;
+      margin: 24px 0 28px 0;
+    }
+
+    .voice-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 28px;
+    }
+
+    .voice-table th {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 10px;
+      color: var(--cream);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 10px 14px;
+      background: var(--green-dark);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .voice-table th:first-child {
+      background: var(--charcoal);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .voice-table td {
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+      padding: 10px 14px;
+      line-height: 1.55;
+      border-bottom: 1px solid rgba(44, 44, 44, 0.1);
+      vertical-align: top;
+    }
+
+    .voice-table td.tone-cell {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--green-dark);
+      background: rgba(200, 217, 190, 0.4);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .voice-table td.write-this {
+      background: var(--green-hunter);
+      color: var(--cream);
+      font-style: italic;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .voice-table td.not-this {
+      background: #F9ECEC;
+      color: var(--charcoal);
+      font-style: italic;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .cta-label {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .cta-card {
+      background: rgba(255,255,255,0.6);
+      border-left: 3px solid var(--gold);
+      padding: 11px 13px;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .cta-context {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      color: var(--green-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    .cta-copy {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--charcoal);
+      line-height: 1.4;
+    }
+
+    /* ============================================================
+       PAGE 8 — QUICK REFERENCE
+    ============================================================ */
+    .quickref-page {
+      display: flex;
+      min-height: 297mm;
+    }
+
+    .quickref-left {
+      width: 50%;
+      background: var(--green-dark);
+      padding: 52px 36px 44px 44px;
+      display: flex;
+      flex-direction: column;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .quickref-right {
+      width: 50%;
+      background: var(--off-white);
+      padding: 52px 44px 44px 36px;
+      display: flex;
+      flex-direction: column;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .qr-title-line {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 48px;
+      color: var(--cream);
+      line-height: 1;
+    }
+
+    .qr-rule {
+      width: 100%;
+      height: 1px;
+      background: var(--gold);
+      margin: 20px 0 24px 0;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .qr-colors-label {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 9px;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .qr-swatch-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 11px;
+    }
+
+    .qr-swatch-block {
+      width: 32px;
+      height: 24px;
+      flex-shrink: 0;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .qr-swatch-name {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 400;
+      font-size: 11px;
+      color: var(--cream);
+      flex: 1;
+    }
+
+    .qr-swatch-hex {
+      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      font-size: 10px;
+      color: rgba(232, 224, 204, 0.6);
+    }
+
+    .qr-section-label {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 9px;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .qr-font-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      align-items: baseline;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(44,44,44,0.07);
+    }
+
+    .qr-font-role {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      color: var(--green-dark);
+      width: 72px;
+      flex-shrink: 0;
+      line-height: 1.4;
+    }
+
+    .qr-font-name {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      color: var(--charcoal);
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .qr-font-weight {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 10px;
+      color: rgba(44,44,44,0.55);
+      line-height: 1.4;
+    }
+
+    .qr-divider {
+      height: 1px;
+      background: rgba(44,44,44,0.12);
+      margin: 18px 0 16px 0;
+    }
+
+    .qr-pairing-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .qr-pairing-swatch {
+      display: flex;
+      width: 36px;
+      height: 16px;
+      flex-shrink: 0;
+      overflow: hidden;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .qr-pairing-half {
+      flex: 1;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .qr-pairing-text {
+      font-family: 'Lato', sans-serif;
+      font-size: 10px;
+      color: var(--charcoal);
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .qr-footer {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 9px;
+      color: rgba(44, 44, 44, 0.45);
+      letter-spacing: 0.04em;
+      line-height: 1.6;
+      border-top: 1px solid rgba(44,44,44,0.12);
+      padding-top: 14px;
+    }
+
+    /* Color blocks print utility */
+    .bg-green-dark { background-color: #1A3A26 !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .bg-green-hunter { background-color: #2D5A3D !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .bg-cream { background-color: #E8E0CC !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .bg-off-white { background-color: #F5F0E8 !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .bg-gold { background-color: #B8965A !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .bg-gold-muted { background-color: #C9A96E !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .bg-sage { background-color: #C8D9BE !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .bg-charcoal { background-color: #2C2C2C !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+
+    @media print {
+      body { background: transparent; }
+      .page { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       PAGE 1 — COVER
+  ============================================================ -->
+  <div class="page cover">
+    <div class="cover-rule-top"></div>
+    <div class="cover-rule-bottom"></div>
+
+    <div class="cover-inner">
+      <p class="cover-eyebrow">Brand Identity Guide</p>
+      <img src="brand_assets/pcs_logo_shield.png" alt="PC's Paddock Shield Logo" class="cover-logo">
+      <h1 class="cover-title">PC'S PADDOCK</h1>
+      <p class="cover-subtitle">RESTAURANT</p>
+      <div class="cover-divider"></div>
+      <p class="cover-tagline">Poughkeepsie, New York &nbsp;·&nbsp; Est. 2007</p>
+    </div>
+
+    <p class="cover-version">v1.0 &nbsp;·&nbsp; 2025</p>
+  </div>
+
+  <!-- ============================================================
+       PAGE 2 — BRAND OVERVIEW
+  ============================================================ -->
+  <div class="page">
+    <div class="page-with-sidebar" style="min-height:297mm;">
+      <div class="sidebar-col">
+        <span class="sidebar-label">Brand Overview</span>
+      </div>
+      <div class="main-col">
+        <div class="oversized-num">01</div>
+
+        <p class="section-eyebrow">Who We Are</p>
+        <h2 class="section-heading">More Than<br>a Restaurant</h2>
+
+        <p class="body-text">
+          PC's Paddock is a family-owned American restaurant nestled inside a lovingly renovated 1840s barn in Poughkeepsie, New York. Since opening in 2007, we've been the kind of place where neighbors linger, birthdays are celebrated, and regulars are known by name. Our menu centers on upscale comfort food — smoked low-and-slow on our onsite smoker, finished with herbs pulled fresh from our garden. We offer relaxed dine-in, seasonal outdoor seating, takeout, catering, and delivery. We're not just a meal — we're a gathering place.
+        </p>
+
+        <p class="traits-label">Brand Personality</p>
+
+        <div class="traits-grid">
+          <div class="trait-card">
+            <p class="trait-name">Warm and Welcoming</p>
+            <p class="trait-desc">Every guest feels like a regular from the moment they walk in.</p>
+          </div>
+          <div class="trait-card">
+            <p class="trait-name">Established & Trustworthy</p>
+            <p class="trait-desc">18 years of consistency. A fixture in the Hudson Valley community.</p>
+          </div>
+          <div class="trait-card">
+            <p class="trait-name">Rustic and Rooted</p>
+            <p class="trait-desc">An 1840s barn, onsite smoker, garden herbs. Authenticity runs deep.</p>
+          </div>
+          <div class="trait-card">
+            <p class="trait-name">Unpretentious</p>
+            <p class="trait-desc">Elevated food, zero attitude. Comfort and quality without the fuss.</p>
+          </div>
+          <div class="trait-card trait-card-full">
+            <p class="trait-name">Community-First</p>
+            <p class="trait-desc">We exist because of Poughkeepsie. Every decision is made with our neighbors in mind.</p>
+          </div>
+        </div>
+
+        <div class="tagline-bar">
+          <p class="tagline-primary">"Welcoming Diners Since 2007"</p>
+          <p class="tagline-extended">"Good Food. Good People. Good Times."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 3 — LOGO SYSTEM
+  ============================================================ -->
+  <div class="page">
+    <div class="logo-page-inner">
+      <div class="oversized-num" style="position:absolute;top:28px;right:36px;">02</div>
+
+      <p class="section-eyebrow">Logo System</p>
+      <h2 class="section-heading" style="font-size:32px;">The Mark Family</h2>
+
+      <div class="logo-display-row">
+        <!-- Shield -->
+        <div class="logo-panel">
+          <div class="logo-panel-box logo-panel-box-dark">
+            <img src="brand_assets/pcs_logo_shield.png" alt="Primary Shield Logo" style="width:180px;height:auto;">
+          </div>
+          <p class="logo-panel-label">Shield Mark — Primary</p>
+          <p class="logo-panel-usage">Primary logo for all official applications.<br>Use on dark or textured backgrounds.</p>
+        </div>
+        <!-- Round Badge -->
+        <div class="logo-panel">
+          <div class="logo-panel-box logo-panel-box-cream">
+            <img src="brand_assets/pcs_logo_round.jpg" alt="Round Badge Logo" style="width:150px;height:auto;border-radius:50%;">
+          </div>
+          <p class="logo-panel-label">Round Badge — Secondary</p>
+          <p class="logo-panel-usage">Social media, circular crops, stamps.<br>Use on cream or light backgrounds.</p>
+        </div>
+        <!-- Alt Horizontal -->
+        <div class="logo-panel">
+          <div class="logo-panel-box logo-panel-box-offwhite">
+            <img src="brand_assets/pcs_logo_alt.png" alt="Alt Horizontal Logo" style="width:140px;height:auto;">
+          </div>
+          <p class="logo-panel-label">Alt Mark — Horizontal</p>
+          <p class="logo-panel-usage">Website headers, letterheads, menus.<br>Use when wide format is needed.</p>
+        </div>
+      </div>
+
+      <div class="rules-section">
+        <p class="rules-label">Logo Usage Rules</p>
+        <div class="rules-grid">
+          <!-- DO column -->
+          <div>
+            <div class="rules-col-header rules-col-header-do">
+              <svg style="display:inline;vertical-align:middle;margin-right:6px;" width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="6.5" fill="rgba(232,224,204,0.25)"/><path d="M3.5 6.5L5.5 8.5L9.5 4.5" stroke="#E8E0CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              DO
+            </div>
+            <div class="rule-item">
+              <svg class="rule-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#2D5A3D"/><path d="M4 7L6 9L10 5" stroke="#E8E0CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Maintain minimum size of 120px (shield mark)</span>
+            </div>
+            <div class="rule-item">
+              <svg class="rule-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#2D5A3D"/><path d="M4 7L6 9L10 5" stroke="#E8E0CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Preserve clear space equal to the height of the "P"</span>
+            </div>
+            <div class="rule-item">
+              <svg class="rule-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#2D5A3D"/><path d="M4 7L6 9L10 5" stroke="#E8E0CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Scale proportionally, always locking aspect ratio</span>
+            </div>
+            <div class="rule-item">
+              <svg class="rule-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#2D5A3D"/><path d="M4 7L6 9L10 5" stroke="#E8E0CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Use only on approved backgrounds (dark green, cream, off-white)</span>
+            </div>
+          </div>
+
+          <!-- NEVER column -->
+          <div>
+            <div class="rules-col-header rules-col-header-dont">
+              <svg style="display:inline;vertical-align:middle;margin-right:6px;" width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="6.5" fill="rgba(255,255,255,0.15)"/><path d="M4.5 4.5L8.5 8.5M8.5 4.5L4.5 8.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+              NEVER
+            </div>
+            <div class="rule-item">
+              <svg class="rule-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#8B3A3A"/><path d="M4.5 4.5L9.5 9.5M9.5 4.5L4.5 9.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>Stretch, squish, or distort the logo in any direction</span>
+            </div>
+            <div class="rule-item">
+              <svg class="rule-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#8B3A3A"/><path d="M4.5 4.5L9.5 9.5M9.5 4.5L4.5 9.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>Recolor outside the approved brand palette</span>
+            </div>
+            <div class="rule-item">
+              <svg class="rule-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#8B3A3A"/><path d="M4.5 4.5L9.5 9.5M9.5 4.5L4.5 9.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>Add drop shadows, glows, or outline effects</span>
+            </div>
+            <div class="rule-item">
+              <svg class="rule-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#8B3A3A"/><path d="M4.5 4.5L9.5 9.5M9.5 4.5L4.5 9.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>Place on busy, clashing, or low-contrast backgrounds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 4 — COLOR PALETTE SWATCHES
+  ============================================================ -->
+  <div class="page">
+    <div class="palette-page-inner">
+      <div class="oversized-num">03</div>
+
+      <p class="section-eyebrow">Color Palette</p>
+      <h2 class="section-heading" style="font-size:32px;">The Color System</h2>
+
+      <div class="swatches-grid">
+
+        <!-- Hunter Green -->
+        <div class="swatch-card">
+          <div class="swatch-block bg-green-hunter swatch-block-dark" style="display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px;">
+            <p class="swatch-name-on-dark">Hunter Green</p>
+            <p class="swatch-hex-on-dark">#2D5A3D</p>
+          </div>
+          <div class="swatch-info">
+            <p class="swatch-rgb">RGB 45, 90, 61</p>
+            <p class="swatch-role">Primary brand color. Nav, headers, CTAs, brand elements.</p>
+          </div>
+        </div>
+
+        <!-- Dark Green -->
+        <div class="swatch-card">
+          <div class="swatch-block bg-green-dark swatch-block-dark" style="display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px;">
+            <p class="swatch-name-on-dark">Dark Green</p>
+            <p class="swatch-hex-on-dark">#1A3A26</p>
+          </div>
+          <div class="swatch-info">
+            <p class="swatch-rgb">RGB 26, 58, 38</p>
+            <p class="swatch-role">Depth, footer backgrounds, deep overlays, covers.</p>
+          </div>
+        </div>
+
+        <!-- Parchment Cream -->
+        <div class="swatch-card">
+          <div class="swatch-block bg-cream" style="border:1px solid rgba(44,44,44,0.08);display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px;">
+            <p class="swatch-name-light">Parchment Cream</p>
+            <p class="swatch-hex-light">#E8E0CC</p>
+          </div>
+          <div class="swatch-info">
+            <p class="swatch-rgb">RGB 232, 224, 204</p>
+            <p class="swatch-role">Text on dark. Warm alternate page backgrounds.</p>
+          </div>
+        </div>
+
+        <!-- Warm Off-White -->
+        <div class="swatch-card">
+          <div class="swatch-block bg-off-white" style="border:1px solid rgba(44,44,44,0.08);display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px;">
+            <p class="swatch-name-light">Warm Off-White</p>
+            <p class="swatch-hex-light">#F5F0E8</p>
+          </div>
+          <div class="swatch-info">
+            <p class="swatch-rgb">RGB 245, 240, 232</p>
+            <p class="swatch-role">Page backgrounds. Light surface base. Body sections.</p>
+          </div>
+        </div>
+
+        <!-- Gold Accent -->
+        <div class="swatch-card">
+          <div class="swatch-block bg-gold swatch-block-dark" style="display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px;">
+            <p class="swatch-name-on-dark">Gold Accent</p>
+            <p class="swatch-hex-on-dark">#B8965A</p>
+          </div>
+          <div class="swatch-info">
+            <p class="swatch-rgb">RGB 184, 150, 90</p>
+            <p class="swatch-role">CTA buttons, dividers, icon highlights, active states.</p>
+          </div>
+        </div>
+
+        <!-- Muted Gold -->
+        <div class="swatch-card">
+          <div class="swatch-block bg-gold-muted swatch-block-dark" style="display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px;">
+            <p class="swatch-name-on-dark">Muted Gold</p>
+            <p class="swatch-hex-on-dark">#C9A96E</p>
+          </div>
+          <div class="swatch-info">
+            <p class="swatch-rgb">RGB 201, 169, 110</p>
+            <p class="swatch-role">Hover states, borders, secondary accents, subheadings.</p>
+          </div>
+        </div>
+
+        <!-- Light Sage -->
+        <div class="swatch-card">
+          <div class="swatch-block bg-sage" style="border:1px solid rgba(44,44,44,0.08);display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px;">
+            <p class="swatch-name-light">Light Sage</p>
+            <p class="swatch-hex-light">#C8D9BE</p>
+          </div>
+          <div class="swatch-info">
+            <p class="swatch-rgb">RGB 200, 217, 190</p>
+            <p class="swatch-role">Feature cards, menu sections, backgrounds behind content.</p>
+          </div>
+        </div>
+
+        <!-- Charcoal -->
+        <div class="swatch-card">
+          <div class="swatch-block bg-charcoal swatch-block-dark" style="display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px;">
+            <p class="swatch-name-on-dark">Charcoal</p>
+            <p class="swatch-hex-on-dark">#2C2C2C</p>
+          </div>
+          <div class="swatch-info">
+            <p class="swatch-rgb">RGB 44, 44, 44</p>
+            <p class="swatch-role">Body text, long-form copy, table content, captions.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Color usage note bar -->
+      <div style="margin-top:36px;border-top:1px solid rgba(44,44,44,0.12);padding-top:24px;">
+        <p style="font-family:'Cinzel',serif;font-weight:600;font-size:9px;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:14px;">Color Usage Guidelines</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:var(--sage);padding:12px 14px;border-left:2px solid var(--gold);print-color-adjust:exact;-webkit-print-color-adjust:exact;">
+            <p style="font-family:'Libre Baskerville',serif;font-weight:700;font-size:11px;color:var(--green-dark);margin-bottom:4px;">Accessibility First</p>
+            <p style="font-family:'Lato',sans-serif;font-weight:400;font-size:10px;color:var(--charcoal);line-height:1.5;">All text/background pairs must meet WCAG AA contrast (4.5:1 minimum). Never use cream text on cream or gold text on off-white.</p>
+          </div>
+          <div style="background:var(--sage);padding:12px 14px;border-left:2px solid var(--gold);print-color-adjust:exact;-webkit-print-color-adjust:exact;">
+            <p style="font-family:'Libre Baskerville',serif;font-weight:700;font-size:11px;color:var(--green-dark);margin-bottom:4px;">Dominant + Accent Rule</p>
+            <p style="font-family:'Lato',sans-serif;font-weight:400;font-size:10px;color:var(--charcoal);line-height:1.5;">Hunter Green dominates. Gold accents no more than 20% of any composition. Sage used for large background areas only.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 5 — COLOR PAIRINGS
+  ============================================================ -->
+  <div class="page">
+    <div class="pairings-page" style="position:relative;">
+      <div class="pairings-oversized">03</div>
+
+      <p class="pairings-eyebrow">Color Pairings</p>
+      <h2 class="pairings-heading">Approved Combinations</h2>
+
+      <div class="pairings-grid">
+
+        <!-- 1. Hunter Green + Cream -->
+        <div class="pairing-card">
+          <div class="pairing-strip">
+            <div class="pairing-half bg-green-hunter"></div>
+            <div class="pairing-half bg-cream"></div>
+          </div>
+          <div class="pairing-info">
+            <p class="pairing-name">Hunter Green + Cream</p>
+            <p class="pairing-use">Primary pairing. Nav, headers, hero sections.</p>
+          </div>
+        </div>
+
+        <!-- 2. Off-White + Charcoal -->
+        <div class="pairing-card">
+          <div class="pairing-strip">
+            <div class="pairing-half bg-off-white"></div>
+            <div class="pairing-half bg-charcoal"></div>
+          </div>
+          <div class="pairing-info">
+            <p class="pairing-name">Off-White + Charcoal</p>
+            <p class="pairing-use">Body content. Best for long-form reading.</p>
+          </div>
+        </div>
+
+        <!-- 3. Hunter Green + Gold -->
+        <div class="pairing-card">
+          <div class="pairing-strip">
+            <div class="pairing-half bg-green-hunter"></div>
+            <div class="pairing-half bg-gold"></div>
+          </div>
+          <div class="pairing-info">
+            <p class="pairing-name">Hunter Green + Gold</p>
+            <p class="pairing-use">CTA buttons on dark backgrounds.</p>
+          </div>
+        </div>
+
+        <!-- 4. Light Sage + Charcoal -->
+        <div class="pairing-card">
+          <div class="pairing-strip">
+            <div class="pairing-half bg-sage"></div>
+            <div class="pairing-half bg-charcoal"></div>
+          </div>
+          <div class="pairing-info">
+            <p class="pairing-name">Light Sage + Charcoal</p>
+            <p class="pairing-use">Feature cards, menu sections.</p>
+          </div>
+        </div>
+
+        <!-- 5. Dark Green + Cream -->
+        <div class="pairing-card">
+          <div class="pairing-strip">
+            <div class="pairing-half bg-green-dark"></div>
+            <div class="pairing-half bg-cream"></div>
+          </div>
+          <div class="pairing-info">
+            <p class="pairing-name">Dark Green + Cream</p>
+            <p class="pairing-use">Footer, deep overlays, cover pages.</p>
+          </div>
+        </div>
+
+        <!-- 6. Cream + Gold -->
+        <div class="pairing-card">
+          <div class="pairing-strip">
+            <div class="pairing-half bg-cream"></div>
+            <div class="pairing-half bg-gold"></div>
+          </div>
+          <div class="pairing-info">
+            <p class="pairing-name">Cream + Gold</p>
+            <p class="pairing-use">Dividers, secondary buttons on light backgrounds.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pairing notes -->
+      <div style="margin-top:32px;border-top:1px solid rgba(184,150,90,0.25);padding-top:24px;">
+        <p style="font-family:'Cinzel',serif;font-weight:600;font-size:9px;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:14px;">Application Notes</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;">
+          <div style="border:1px solid rgba(184,150,90,0.2);padding:16px 14px;print-color-adjust:exact;-webkit-print-color-adjust:exact;">
+            <p style="font-family:'Libre Baskerville',serif;font-weight:700;font-size:11px;color:var(--cream);margin-bottom:8px;">Digital</p>
+            <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:10px;color:rgba(232,224,204,0.7);line-height:1.6;">Website hero: Hunter Green background with Cream heading, Gold CTA button. Navigation: Hunter Green bar, Lato Bold nav items.</p>
+          </div>
+          <div style="border:1px solid rgba(184,150,90,0.2);padding:16px 14px;print-color-adjust:exact;-webkit-print-color-adjust:exact;">
+            <p style="font-family:'Libre Baskerville',serif;font-weight:700;font-size:11px;color:var(--cream);margin-bottom:8px;">Print</p>
+            <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:10px;color:rgba(232,224,204,0.7);line-height:1.6;">Menus: Off-White background, Charcoal body text, Hunter Green section headers, Gold rule dividers. Covers: Dark Green.</p>
+          </div>
+          <div style="border:1px solid rgba(184,150,90,0.2);padding:16px 14px;print-color-adjust:exact;-webkit-print-color-adjust:exact;">
+            <p style="font-family:'Libre Baskerville',serif;font-weight:700;font-size:11px;color:var(--cream);margin-bottom:8px;">Signage</p>
+            <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:10px;color:rgba(232,224,204,0.7);line-height:1.6;">Exterior: Dark Green background with Cream and Gold lettering. Chalkboards: Charcoal surface with Cream chalk-effect type.</p>
+          </div>
+        </div>
+
+        <!-- Contrast reminder strip -->
+        <div style="border:1px solid rgba(184,150,90,0.2);padding:16px 18px;print-color-adjust:exact;-webkit-print-color-adjust:exact;">
+          <p style="font-family:'Cinzel',serif;font-weight:600;font-size:9px;color:var(--gold);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:10px;">Accessibility &amp; Contrast</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div>
+              <p style="font-family:'Lato',sans-serif;font-weight:400;font-size:10px;color:rgba(232,224,204,0.8);line-height:1.6;margin-bottom:6px;">Hunter Green on Cream: <strong style="color:var(--gold);">9.2:1</strong> — exceeds AAA</p>
+              <p style="font-family:'Lato',sans-serif;font-weight:400;font-size:10px;color:rgba(232,224,204,0.8);line-height:1.6;">Cream on Dark Green: <strong style="color:var(--gold);">10.4:1</strong> — exceeds AAA</p>
+            </div>
+            <div>
+              <p style="font-family:'Lato',sans-serif;font-weight:400;font-size:10px;color:rgba(232,224,204,0.8);line-height:1.6;margin-bottom:6px;">Charcoal on Off-White: <strong style="color:var(--gold);">13.8:1</strong> — exceeds AAA</p>
+              <p style="font-family:'Lato',sans-serif;font-weight:400;font-size:10px;color:rgba(232,224,204,0.8);line-height:1.6;">Gold on Dark Green: <strong style="color:var(--gold);">4.8:1</strong> — passes AA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 6 — TYPOGRAPHY
+  ============================================================ -->
+  <div class="page">
+    <div class="type-page-inner">
+      <div class="oversized-num">04</div>
+
+      <p class="section-eyebrow">Typography</p>
+      <h2 class="section-heading" style="font-size:32px;">Type System</h2>
+
+      <div class="type-specimens">
+
+        <!-- Playfair Display -->
+        <div class="type-specimen-band">
+          <div class="type-specimen-text">
+            <span style="font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:48px;color:#2D5A3D;line-height:1.1;">Good Food.</span>
+          </div>
+          <div class="type-specimen-label">
+            <p class="type-label-text">DISPLAY / HERO<br>Playfair Display<br>Bold Italic · 48–64px</p>
+          </div>
+        </div>
+
+        <!-- Libre Baskerville -->
+        <div class="type-specimen-band">
+          <div class="type-specimen-text">
+            <span style="font-family:'Libre Baskerville',serif;font-weight:700;font-size:22px;color:#2C2C2C;line-height:1.3;">Starters &amp; Sharables</span>
+          </div>
+          <div class="type-specimen-label">
+            <p class="type-label-text">H3 HEADINGS<br>Libre Baskerville<br>Bold · 18–22px</p>
+          </div>
+        </div>
+
+        <!-- Lato Regular -->
+        <div class="type-specimen-band">
+          <div class="type-specimen-text" style="max-width:380px;">
+            <span style="font-family:'Lato',sans-serif;font-weight:400;font-size:15px;color:#2C2C2C;line-height:1.7;">Come hungry, leave happy. PC's Paddock has been welcoming Poughkeepsie locals since 2007 with upscale comfort food and genuine Hudson Valley hospitality.</span>
+          </div>
+          <div class="type-specimen-label">
+            <p class="type-label-text">BODY COPY<br>Lato<br>Regular 400 · 16px</p>
+          </div>
+        </div>
+
+        <!-- Lato Bold -->
+        <div class="type-specimen-band">
+          <div class="type-specimen-text">
+            <span style="font-family:'Lato',sans-serif;font-weight:700;font-size:13px;color:#2D5A3D;letter-spacing:0.12em;text-transform:uppercase;">MENU &nbsp;·&nbsp; RESERVATIONS &nbsp;·&nbsp; ABOUT &nbsp;·&nbsp; ORDER ONLINE</span>
+          </div>
+          <div class="type-specimen-label">
+            <p class="type-label-text">UI LABELS / NAV<br>Lato<br>Bold 700 · 13–15px</p>
+          </div>
+        </div>
+
+        <!-- Cormorant Garamond -->
+        <div class="type-specimen-band">
+          <div class="type-specimen-text">
+            <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:26px;color:#B8965A;line-height:1.2;">Welcoming Diners Since 2007</span>
+          </div>
+          <div class="type-specimen-label">
+            <p class="type-label-text">ACCENT / SCRIPT<br>Cormorant Garamond<br>Italic · 20–26px</p>
+          </div>
+        </div>
+
+      </div>
+
+      <p style="font-family:'Cinzel',serif;font-weight:600;font-size:10px;color:#B8965A;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px;">Type Hierarchy</p>
+
+      <table class="type-table">
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Font Family</th>
+            <th>Weight</th>
+            <th>Size</th>
+            <th>Color</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:600;">Display / Hero</td>
+            <td>Playfair Display</td>
+            <td>Bold Italic (700i)</td>
+            <td>48–64px</td>
+            <td>Hunter Green</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">H1 / Section Title</td>
+            <td>Playfair Display</td>
+            <td>Bold (700)</td>
+            <td>32–40px</td>
+            <td>Dark Green</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">H2 / Sub-heading</td>
+            <td>Playfair Display</td>
+            <td>Regular (400)</td>
+            <td>24–30px</td>
+            <td>Charcoal</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">H3 / Card Title</td>
+            <td>Libre Baskerville</td>
+            <td>Bold (700)</td>
+            <td>18–22px</td>
+            <td>Charcoal</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Body Copy</td>
+            <td>Lato</td>
+            <td>Regular (400)</td>
+            <td>15–16px</td>
+            <td>Charcoal</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">UI Labels / Nav</td>
+            <td>Lato</td>
+            <td>Bold (700)</td>
+            <td>13–15px</td>
+            <td>Hunter Green</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Eyebrow Labels</td>
+            <td>Cinzel</td>
+            <td>SemiBold (600)</td>
+            <td>10–12px</td>
+            <td>Gold Accent</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Accent / Quote</td>
+            <td>Cormorant Garamond</td>
+            <td>Italic (400i)</td>
+            <td>20–26px</td>
+            <td>Gold Accent</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 7 — BRAND VOICE
+  ============================================================ -->
+  <div class="page" style="position:relative;">
+    <div class="voice-page">
+      <div class="voice-oversized">05</div>
+
+      <p class="section-eyebrow" style="color:#2D5A3D;">Brand Voice</p>
+      <h2 class="section-heading" style="font-size:32px;color:#1A3A26;">How We Sound</h2>
+
+      <p class="voice-intro">"Every word should feel like it came from a friendly neighbor, not a marketing department."</p>
+
+      <table class="voice-table">
+        <thead>
+          <tr>
+            <th style="background:#2C2C2C;width:22%;">Tone</th>
+            <th style="background:#2D5A3D;">Write This</th>
+            <th style="background:#6B3A3A;">Not This</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tone-cell">Welcoming</td>
+            <td class="write-this">"Pull up a chair — you're always welcome here."</td>
+            <td class="not-this">"We are pleased to welcome guests to our establishment."</td>
+          </tr>
+          <tr>
+            <td class="tone-cell">About the Food</td>
+            <td class="write-this">"Smoked low and slow, just the way it should be."</td>
+            <td class="not-this">"Our culinary team utilizes premium proteins prepared via extended smoking protocols."</td>
+          </tr>
+          <tr>
+            <td class="tone-cell">On Community</td>
+            <td class="write-this">"We're your neighbors first, and a restaurant second."</td>
+            <td class="not-this">"PC's Paddock is proud to serve the Poughkeepsie demographic."</td>
+          </tr>
+          <tr>
+            <td class="tone-cell">About Value</td>
+            <td class="write-this">"Great food doesn't have to come with attitude."</td>
+            <td class="not-this">"We offer competitive pricing for quality dining experiences."</td>
+          </tr>
+          <tr>
+            <td class="tone-cell">Call to Action</td>
+            <td class="write-this">"Come hungry. We'll handle the rest."</td>
+            <td class="not-this">"Reserve your dining experience at our Poughkeepsie location today."</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="cta-label">CTA Copy Examples</p>
+
+      <div class="cta-grid">
+        <div class="cta-card">
+          <p class="cta-context">Homepage Hero</p>
+          <p class="cta-copy">"Come hungry. We'll handle the rest."</p>
+        </div>
+        <div class="cta-card">
+          <p class="cta-context">Reservations</p>
+          <p class="cta-copy">"Book your table — we'll keep the lights on."</p>
+        </div>
+        <div class="cta-card">
+          <p class="cta-context">Menu CTA</p>
+          <p class="cta-copy">"Good food is waiting. Take a look."</p>
+        </div>
+        <div class="cta-card">
+          <p class="cta-context">Order Online</p>
+          <p class="cta-copy">"Dinner in. No pants required."</p>
+        </div>
+        <div class="cta-card">
+          <p class="cta-context">About Page</p>
+          <p class="cta-copy">"Rooted in Poughkeepsie since 2007."</p>
+        </div>
+        <div class="cta-card">
+          <p class="cta-context">Catering Inquiry</p>
+          <p class="cta-copy">"Feed your people. We'll make it unforgettable."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 8 — QUICK REFERENCE
+  ============================================================ -->
+  <div class="page">
+    <div class="quickref-page">
+
+      <!-- LEFT: Dark green side -->
+      <div class="quickref-left">
+        <div>
+          <p class="qr-title-line">QUICK</p>
+          <p class="qr-title-line">REFERENCE</p>
+        </div>
+        <div class="qr-rule"></div>
+
+        <p class="qr-colors-label">Color Palette</p>
+
+        <div class="qr-swatch-row">
+          <div class="qr-swatch-block bg-green-hunter"></div>
+          <span class="qr-swatch-name">Hunter Green</span>
+          <span class="qr-swatch-hex">#2D5A3D</span>
+        </div>
+        <div class="qr-swatch-row">
+          <div class="qr-swatch-block bg-green-dark" style="border:1px solid rgba(184,150,90,0.5);"></div>
+          <span class="qr-swatch-name">Dark Green</span>
+          <span class="qr-swatch-hex">#1A3A26</span>
+        </div>
+        <div class="qr-swatch-row">
+          <div class="qr-swatch-block bg-cream" style="border:1px solid rgba(255,255,255,0.15);"></div>
+          <span class="qr-swatch-name">Parchment Cream</span>
+          <span class="qr-swatch-hex">#E8E0CC</span>
+        </div>
+        <div class="qr-swatch-row">
+          <div class="qr-swatch-block bg-off-white" style="border:1px solid rgba(255,255,255,0.1);"></div>
+          <span class="qr-swatch-name">Warm Off-White</span>
+          <span class="qr-swatch-hex">#F5F0E8</span>
+        </div>
+        <div class="qr-swatch-row">
+          <div class="qr-swatch-block bg-gold"></div>
+          <span class="qr-swatch-name">Gold Accent</span>
+          <span class="qr-swatch-hex">#B8965A</span>
+        </div>
+        <div class="qr-swatch-row">
+          <div class="qr-swatch-block bg-gold-muted"></div>
+          <span class="qr-swatch-name">Muted Gold</span>
+          <span class="qr-swatch-hex">#C9A96E</span>
+        </div>
+        <div class="qr-swatch-row">
+          <div class="qr-swatch-block bg-sage"></div>
+          <span class="qr-swatch-name">Light Sage</span>
+          <span class="qr-swatch-hex">#C8D9BE</span>
+        </div>
+        <div class="qr-swatch-row">
+          <div class="qr-swatch-block bg-charcoal"></div>
+          <span class="qr-swatch-name">Charcoal</span>
+          <span class="qr-swatch-hex">#2C2C2C</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Off-white side -->
+      <div class="quickref-right">
+
+        <p class="qr-section-label">Fonts at a Glance</p>
+
+        <div class="qr-font-row">
+          <span class="qr-font-role">Display</span>
+          <span class="qr-font-name">Playfair Display</span>
+          <span class="qr-font-weight">Bold Italic</span>
+        </div>
+        <div class="qr-font-row">
+          <span class="qr-font-role">H1 Title</span>
+          <span class="qr-font-name">Playfair Display</span>
+          <span class="qr-font-weight">Bold 700</span>
+        </div>
+        <div class="qr-font-row">
+          <span class="qr-font-role">H3 Heading</span>
+          <span class="qr-font-name">Libre Baskerville</span>
+          <span class="qr-font-weight">Bold 700</span>
+        </div>
+        <div class="qr-font-row">
+          <span class="qr-font-role">Body Copy</span>
+          <span class="qr-font-name">Lato</span>
+          <span class="qr-font-weight">Regular 400</span>
+        </div>
+        <div class="qr-font-row">
+          <span class="qr-font-role">UI / Nav</span>
+          <span class="qr-font-name">Lato</span>
+          <span class="qr-font-weight">Bold 700</span>
+        </div>
+        <div class="qr-font-row">
+          <span class="qr-font-role">Eyebrows</span>
+          <span class="qr-font-name">Cinzel</span>
+          <span class="qr-font-weight">SemiBold 600</span>
+        </div>
+        <div class="qr-font-row">
+          <span class="qr-font-role">Accent</span>
+          <span class="qr-font-name">Cormorant Garamond</span>
+          <span class="qr-font-weight">Italic 400</span>
+        </div>
+
+        <div class="qr-divider"></div>
+
+        <p class="qr-section-label">Approved Pairings</p>
+
+        <div class="qr-pairing-row">
+          <div class="qr-pairing-swatch">
+            <div class="qr-pairing-half bg-green-hunter"></div>
+            <div class="qr-pairing-half bg-cream"></div>
+          </div>
+          <span class="qr-pairing-text">Hunter Green + Cream — Primary</span>
+        </div>
+        <div class="qr-pairing-row">
+          <div class="qr-pairing-swatch">
+            <div class="qr-pairing-half bg-green-dark"></div>
+            <div class="qr-pairing-half bg-cream"></div>
+          </div>
+          <span class="qr-pairing-text">Dark Green + Cream — Footer/Covers</span>
+        </div>
+        <div class="qr-pairing-row">
+          <div class="qr-pairing-swatch">
+            <div class="qr-pairing-half bg-green-hunter"></div>
+            <div class="qr-pairing-half bg-gold"></div>
+          </div>
+          <span class="qr-pairing-text">Hunter Green + Gold — CTAs on Dark</span>
+        </div>
+
+        <div class="qr-divider"></div>
+
+        <p class="qr-section-label">Brand Taglines</p>
+        <div style="margin-bottom:12px;">
+          <p style="font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:15px;color:var(--green-dark);line-height:1.4;margin-bottom:4px;">"Welcoming Diners Since 2007"</p>
+          <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:9px;color:rgba(44,44,44,0.5);letter-spacing:0.05em;">Primary tagline — use in hero sections &amp; hero text</p>
+        </div>
+        <div style="margin-bottom:12px;">
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:15px;color:var(--gold);line-height:1.4;margin-bottom:4px;">"Good Food. Good People. Good Times."</p>
+          <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:9px;color:rgba(44,44,44,0.5);letter-spacing:0.05em;">Extended tagline — use in footer &amp; social</p>
+        </div>
+
+        <div class="qr-divider"></div>
+
+        <p class="qr-section-label">Logo Minimum Sizes</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px;">
+          <div style="background:var(--sage);padding:10px 12px;border-left:2px solid var(--gold);print-color-adjust:exact;-webkit-print-color-adjust:exact;">
+            <p style="font-family:'Libre Baskerville',serif;font-weight:700;font-size:10px;color:var(--green-dark);margin-bottom:3px;">Shield Mark</p>
+            <p style="font-family:'Cinzel',serif;font-weight:600;font-size:11px;color:var(--charcoal);">120px min</p>
+          </div>
+          <div style="background:var(--sage);padding:10px 12px;border-left:2px solid var(--gold);print-color-adjust:exact;-webkit-print-color-adjust:exact;">
+            <p style="font-family:'Libre Baskerville',serif;font-weight:700;font-size:10px;color:var(--green-dark);margin-bottom:3px;">Round Badge</p>
+            <p style="font-family:'Cinzel',serif;font-weight:600;font-size:11px;color:var(--charcoal);">80px min</p>
+          </div>
+        </div>
+
+        <div style="background:var(--sage);border-left:3px solid var(--gold);padding:16px 16px;margin-bottom:20px;print-color-adjust:exact;-webkit-print-color-adjust:exact;">
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:17px;color:var(--green-dark);line-height:1.5;margin-bottom:6px;">"Good Food. Good People. Good Times."</p>
+          <p style="font-family:'Cinzel',serif;font-weight:600;font-size:9px;color:var(--gold);letter-spacing:0.2em;">PC'S PADDOCK &nbsp;·&nbsp; EST. 2007</p>
+        </div>
+
+        <div class="qr-footer">
+          PC'S PADDOCK RESTAURANT<br>
+          Brand Identity Guide v1.0 &nbsp;·&nbsp; Poughkeepsie, New York<br>
+          273 Titusville Rd, Poughkeepsie, NY 12603
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
